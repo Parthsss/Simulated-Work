@@ -1,0 +1,65 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #444;
+  }
+  
+  #score,
+  #time-left {
+    font-size: 2rem;
+    color: #75136c;
+    font-weight: bold;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .square {
+    width: 80px;
+    height: 80px;
+    background: #f1faee;
+    border: 2px solid #457b9d;
+    border-radius: 10px;
+    transition: background-color 0.2s, transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .square:hover {
+    background: #a8dadc;
+    transform: scale(1.1);
+  }
+  
+  .mole {
+    background: url('https://img.icons8.com/emoji/96/mole.png') no-repeat center;
+    background-size: 50px 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .square {
+      width: 60px;
+      height: 60px;
+    }
+  }
