@@ -53,8 +53,11 @@ body {
   }
   
   .mole {
-    background: url('https://img.icons8.com/emoji/96/mole.png') no-repeat center;
-    background-size: 50px 50px;
+    background-image: url('./mole.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #388E3C;
+    transition: background-color 0.2s ease;
   }
   
   @media (max-width: 768px) {
