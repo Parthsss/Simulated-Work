@@ -1,0 +1,105 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+button {
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    margin: 20px auto;
+    width: 450px;
+    height: 450px;
+    border: 2px solid #004d40;
+    background-color: #b2dfdb;
+    position: relative;
+}
+
+.grid div {
+    box-sizing: border-box;
+    border: 1px solid #e0f7fa;
+    background-color: #80cbc4;
+}
+
+.starting-block {
+    background-color: #1b5e20;
+}
+
+.ending-block {
+    background-color: #d50000;
+}
+
+.frog {
+    background-color: #43a047;
+    border-radius: 50%;
+}
+
+.log-left,
+.log-right {
+    background-color: #795548;
+}
+
+.log-left.l1,
+.log-right.l1 {
+    background-color: #6d4c41;
+}
+
+.car-left,
+.car-right {
+    background-color: #e53935;
+    border-radius: 5px;
+}
+
+.car-left.c1,
+.car-right.c1 {
+    background-color: #d32f2f;
+}
+
+.car-left.c2,
+.car-right.c2 {
+    background-color: #f44336;
+}
+
+.car-left.c3,
+.car-right.c3 {
+    background-color: #ef5350;
+}
+
+/* Additional hover and responsive styling for better UI */
+button:focus {
+    outline: none;
+    background-color: #004d40;
+}
+
+@media (max-width: 500px) {
+    .grid {
+        width: 100%;
+        height: auto;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+    }
+}
