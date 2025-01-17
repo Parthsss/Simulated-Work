@@ -89,7 +89,7 @@ button:hover {
     background-color: #ef5350;
 }
 
-/* Additional hover and responsive styling for better UI */
+
 button:focus {
     outline: none;
     background-color: #004d40;

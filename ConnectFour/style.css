@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Status Display */
+.status {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px #000;
+    animation: fade-in 1s ease-in-out;
+}
+
+/* Board Styling */
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, 80px); /* 7 columns */
+    grid-template-rows: repeat(6, 80px);   /* 6 rows */
+    gap: 5px;
+    background-color: #003366;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.board:hover {
+    transform: scale(1.05);
+}
+
+/* Cell Styling */
+.board div {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Player Discs */
+.disc {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: -100px; /* Start above the cell */
+    transition: top 0.4s ease, background-color 0.3s ease;
+}
+
+.player1 {
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+}
+
+.player2 {
+    background: linear-gradient(45deg, #36d1dc, #5b86e5);
+}
+
+/* Reset Button */
+.reset-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #ff4e50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reset-button:hover {
+    background-color: #f9d423;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes drop-disc {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 5px;
+    }
+}

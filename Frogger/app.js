@@ -67,14 +67,6 @@ function moveLogLeft(logLeft) {
 }
 function moveLogRight(logRight) {
   switch (true) {
-    case logRight.classList.contains("l1"):
-      logRight.classList.remove("l1");
-      logRight.classList.add("l5");
-      break;
-    case logRight.classList.contains("l2"):
-      logRight.classList.remove("l2");
-      logRight.classList.add("l1");
-      break;
     case logRight.classList.contains("l3"):
       logRight.classList.remove("l3");
       logRight.classList.add("l2");
